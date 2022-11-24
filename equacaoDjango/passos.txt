@@ -1,0 +1,74 @@
+Verificar versão do python
+
+Criar um ambiente virtual (pyhton3 -m venv ./env)
+
+Ativar ambiente vritual (souce ./env/bin/activate)
+
+Instalar django (pip install django)
+
+Verificar versão do django (python3 -m django --version)
+
+Guardar dependencias  na pasta(pip freeze > requirements.txt)
+________________________________________________________________________________________
+
+Criar projeto django (django-admin startproject projeto1)
+
+Configurar no arquivo (settings.py)
+- ALLOWED_HOSTS = ['127.0.0.1']
+- Adicionar pasta de templates (
+        'DIRS': ['templates'],
+)
+ - database (
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'DjangoDB',
+        'USER': 'mayaraTeste',
+        'PASSWORD': '12345',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
+)
+- url root (
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+) 
+
+
+Subir aplicação na pasta do projeto (python manage.py runserver)
+________________________________________________________________________________________
+
+Criação de uma aplicação dentro do projeto Django(pyhton manage.py startapp app1)
+
+Configurar urls(projeto1 e app1)
+
+Criar view (index)
+
+Criar pasta templates
+________________________________________________________________________________________
+
+Resgitrar app na área de "INSTALLED_APPS"
+
+Criar migrations (python manage.py makemigrations)
+
+Criar tableas no banco (python manage.py migrate)
+________________________________________________________________________________________
+python shell (pyhton manage.py shell) verificação de criação de tabelas
+
+Criar super usuario para acessar area administrativa django (python manage.py cratesuperuser)
+
+Acessar superusuario(python manage.py runserver)
+
+Registrar models no admin.py(app1)
+________________________________________________________________________________________
+Criar formulario
+
+Testar formulario(renderizando -GET)
+
+jinja (engine de templates) -> insere código de templates
+
+bootstrap(css)
+________________________________________________________________________________________
+Páginas dinamicas
+
+
+Sair do ambiente virtual (deactivate )
+

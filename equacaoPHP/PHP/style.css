@@ -1,0 +1,27 @@
+body {
+    margin: 1rem;
+    padding: 20px;
+    font-size: 17px;
+    background-color: rgb(179, 173, 173);
+}
+input[type="number"] {
+    padding: 2px;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+.row {
+    padding: 15px;
+}
+button{
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 18px;
+    background: rgb(179, 173, 173);
+}button:hover {
+    box-shadow:  2px 2px 0px #555555,
+             -2px -2px 0px #ffffff;
+}
