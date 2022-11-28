@@ -4,24 +4,27 @@ from .forms import UserForm, EquacaoForm
 import math
 
 def index (Request):
-    form = EquacaoForm(Request.POST)
-    if form.is_valid():
-        a = form.cleaned_data['a']
-        b = form.cleaned_data['b']
-        c = form.cleaned_data['c']
-        result = equacao(a, b, c)
-    context = {
-        'form' : form,
-        'result' : result
-    }
+    if Request.method == "GET":
+        form = EquacaoForm()
+        context = {
+            'form' : form
+        }
+        return render(Request, 'user/index.html', context=context)
+    else:    
+        form = EquacaoForm(Request.POST)
+        if form.is_valid():
+            a = form.cleaned_data['a']
+            b = form.cleaned_data['b']
+            c = form.cleaned_data['c']
+            result = equacao(a, b, c)
+        context = {
+            'form' : form,
+            'result' : result
+        }
 
-    return render(Request, 'user/index.html', context=context)
+        return render(Request, 'user/index.html', context=context)
 
 def create (Request):
-    #GET
-    #POST
-    #PUT -ATUALIZAÇÃO
-    #DELETE
     if Request.method == 'GET':
         form = UserForm()
         context = {

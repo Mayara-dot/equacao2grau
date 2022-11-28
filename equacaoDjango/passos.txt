@@ -8,6 +8,11 @@ Instalar django (pip install django)
 
 Verificar versão do django (python3 -m django --version)
 
+Instalar pymsql (pip install pymysql)
+
+Adicionar no arquivo __init__.py (import pymysql 
+pymysql.install_as_MySQLdb())
+
 Guardar dependencias  na pasta(pip freeze > requirements.txt)
 ________________________________________________________________________________________
 
@@ -53,7 +58,7 @@ Criar tableas no banco (python manage.py migrate)
 ________________________________________________________________________________________
 python shell (pyhton manage.py shell) verificação de criação de tabelas
 
-Criar super usuario para acessar area administrativa django (python manage.py cratesuperuser)
+Criar super usuario para acessar area administrativa django (python manage.py createsuperuser)
 
 Acessar superusuario(python manage.py runserver)
 

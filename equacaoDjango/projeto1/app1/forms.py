@@ -11,7 +11,7 @@ class UserForm (forms.ModelForm):
             'email'
         ]
 
-#forms.form
+
 class EquacaoForm (forms.ModelForm):
     class Meta:
         model = Equacao
